@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BookLoop — Campus Textbook Reuse Platform</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<nav><div class="wrap">
+<a class="logo" href="#top" aria-label="BookLoop home"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 22V10a4 4 0 0 1 4-4h12"/><path d="M26 10v12a4 4 0 0 1-4 4H10"/><path d="M19 3l4 3-4 3M13 29l-4-3 4-3" stroke="#0e8c8c"/></svg>BookLoop</a>
+<ul><li><a href="#browse">Browse</a></li><li><a href="#how">How it works</a></li><li><a href="#impact">Impact</a></li><li><a href="#admin">Admin</a></li><li><a href="#plan">Plan</a></li><li><a class="btn sm" href="#browse">Find a book</a></li></ul>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+<div>
+<h1>The textbook you need is on a senior's shelf.</h1>
+<p>BookLoop is a proposed campus platform where students buy, sell, rent, exchange or donate used academic books, filtered by department, semester, course code and edition.</p>
+<div class="cta"><a class="btn" href="#browse">Try the prototype</a><a class="btn alt" href="#how">See how it works</a></div>
+</div>
+<div aria-hidden="true">
+<div class="shelf" id="shelf"></div>
+<div class="tagline">Reuse Books. Reduce Costs. Share Knowledge.</div>
+</div>
+</div></header>
+
+<section class="band" id="problem"><div class="wrap">
+<h2>Why this is needed</h2>
+<div class="problem">No single campus place helps students find the right textbook at a fair price.</div>
+<div class="grid">
+<div class="box"><h3>New books cost a lot</h3><p>Many are used for one semester, then sit unused.</p></div>
+<div class="box"><h3>The right edition is hard to find</h3><p>Syllabus regulation and edition matter, and are rarely listed.</p></div>
+<div class="box"><h3>Listings are scattered</h3><p>Students rely on WhatsApp groups, friends and seniors.</p></div>
+<div class="box"><h3>Usable books go to waste</h3><p>Sellers and donors struggle to find interested students.</p></div>
+</div></div></section>
+
+<section id="browse"><div class="wrap">
+<h2>Browse the catalogue</h2>
+<p class="lede">A working prototype of the proposed interface. Listings below are sample data for demonstration only, not real students or real books on sale.</p>
+<div class="filters">
+<input id="q" type="search" placeholder="Search title, author or course code" aria-label="Search books">
+<select id="fDept" aria-label="Department"><option value="">All departments</option></select>
+<select id="fSem" aria-label="Semester"><option value="">All semesters</option></select>
+<select id="fType" aria-label="Transaction type"><option value="">Buy, rent, swap, free</option></select>
+</div>
+<p class="note" id="mode"></p>
+<div class="cards" id="cards" aria-live="polite"></div>
+
+<form class="add" id="addForm">
+<h3>List a book you own</h3>
+<div><label for="aT">Title</label><input id="aT" required></div>
+<div><label for="aA">Author</label><input id="aA" required></div>
+<div><label for="aC">Course code</label><input id="aC" required></div>
+<div><label for="aD">Department</label><select id="aD"></select></div>
+<div><label for="aS">Semester</label><select id="aS"></select></div>
+<div><label for="aE">Edition</label><input id="aE" placeholder="e.g. 3rd"></div>
+<div><label for="aN">Condition</label><select id="aN"><option>Like new</option><option>Good</option><option>Fair</option></select></div>
+<div><label for="aY">Offer as</label><select id="aY"><option>Sell</option><option>Rent</option><option>Exchange</option><option>Donate</option></select></div>
+<div><label for="aP">Price (₹)</label><input id="aP" type="number" min="0" value="0"></div>
+<div><button class="btn" type="submit">Add listing</button></div>
+</form>
+<p class="note" id="formNote"></p>
+</div></section>
+
+<section class="band" id="how"><div class="wrap">
+<h2>How it works</h2>
+<p class="lede">Two paths that meet at an on-campus book exchange.</p>
+<div class="flows">
+<div class="box"><h3>If you have a book</h3><ol class="steps"><li>Register or log in</li><li>Add details and photos</li><li>Set a price, or choose rent, exchange or donate</li><li>Publish the listing</li><li>Reply to interested students</li><li>Hand over safely on campus</li><li>Mark the listing completed</li></ol></div>
+<div class="box"><h3>If you need a book</h3><ol class="steps"><li>Register or log in</li><li>Search by subject, semester, code or regulation</li><li>Compare edition, condition and price</li><li>Contact the owner</li><li>Agree on the exchange details</li><li>Collect the book and leave feedback</li></ol></div>
+</div>
+<p class="meet">Both paths end at the same place: a safe handover inside your campus.</p>
+</div></section>
+
+<section id="features"><div class="wrap">
+<h2>Proposed features</h2>
+<div class="grid">
+<div class="box"><h3>Academic filters</h3><p>Department, semester, subject, course code, regulation, edition and condition.</p></div>
+<div class="box"><h3>Five ways to share</h3><p>Buy, sell, rent, exchange or donate, all in one place.</p></div>
+<div class="box"><h3>Listing status</h3><p>Mark books as available, reserved or completed.</p></div>
+<div class="box"><h3>Safety basics</h3><p>Listing moderation, user reports and campus handover guidance, managed from an admin panel.</p></div>
+</div></div></section>
+
+<section id="impact"><div class="wrap"><h2>Why BookLoop is a good EDI project</h2><p class="lede">These are the expected benefits. They still need to be tested in a pilot, and we have not yet checked competitors or prior work.</p><div class="two"><div class="box"><h3>Social impact</h3><ul><li>Lower textbook costs for students</li><li>More sharing among students</li><li>Better access to academic resources</li></ul></div><div class="box"><h3>Environmental impact</h3><ul><li>Longer useful life for textbooks</li><li>Reuse instead of disposal</li><li>A circular approach to learning resources</li></ul></div><div class="box"><h3>Technical feasibility</h3><ul><li>Standard web tools and a database</li><li>Starts as a small campus prototype</li></ul></div><div class="box"><h3>Innovation and entrepreneurship</h3><ul><li>Academic details plus campus-based discovery</li><li>Five reuse options in one place</li><li>Can grow to other departments after validation</li></ul></div></div></div></section>
+<section class="band" id="admin"><div class="wrap"><h2>Admin panel (proposed)</h2><p class="lede" id="admLede">Moderators review reports and new listings. This is a mockup with sample items. Try the buttons.</p><div class="admin" id="adm"><div class="row"><div><b>Listing awaiting review</b><div class="meta">Sample: missing edition details</div></div><div class="acts"><button class="btn sm" data-a="Approved">Approve</button><button class="btn sm alt" data-a="Removed">Remove</button></div></div><div class="row"><div><b>User report</b><div class="meta">Sample: price different from the listing</div></div><div class="acts"><button class="btn sm" data-a="Resolved">Resolve</button><button class="btn sm alt" data-a="Warned">Warn user</button></div></div><div class="row"><div><b>New account</b><div class="meta">Sample: college email not verified</div></div><div class="acts"><button class="btn sm" data-a="Verified">Verify</button><button class="btn sm alt" data-a="Suspended">Suspend</button></div></div></div></div></section>
+<section id="resources"><div class="wrap"><h2>Resources needed</h2><p class="lede">What it takes to build and test the project. Nothing here is claimed as already done.</p><div class="two"><div class="box"><h3>Hardware</h3><ul><li>Laptop or desktop</li><li>Smartphone for mobile testing</li><li>Sample textbooks for the catalogue</li></ul></div><div class="box"><h3>Software</h3><ul><li>HTML, CSS, JavaScript and a frontend framework</li><li>Backend service or API</li><li>Database for users, listings and transactions</li><li>Git and GitHub</li><li>A design tool for wireframes</li></ul></div><div class="box"><h3>People</h3><ul><li>Frontend developer</li><li>Backend and database developer</li><li>UI/UX designer</li><li>Student testers and a faculty mentor</li></ul></div><div class="box"><h3>Campus operations</h3><ul><li>A pilot group on campus</li><li>Listing guidelines and moderation</li><li>Rules for condition, pricing, cancellations and safe handover</li></ul></div></div></div></section>
+<section class="band" id="team"><div class="wrap"><h2>Our team</h2><p class="lede">Replace these placeholders with the names and register numbers from your template.</p><div class="team"><div class="person"><b>Member name</b><span>Register number</span></div><div class="person"><b>Member name</b><span>Register number</span></div><div class="person"><b>Member name</b><span>Register number</span></div><div class="person"><b>Faculty mentor</b><span>Department</span></div></div></div></section>
+<section id="plan"><div class="wrap">
+<h2>How BookLoop differs</h2>
+<p class="lede">A qualitative comparison with current options. It is not based on market research.</p>
+<div class="scroll"><table>
+<tr><th>Feature</th><th>Bookstores</th><th>Social groups</th><th>General marketplaces</th><th>BookLoop (proposed)</th></tr>
+<tr><td>Campus-focused</td><td>–</td><td>Partly</td><td>–</td><td>Yes</td></tr>
+<tr><td>Course code and edition filters</td><td>–</td><td>–</td><td>–</td><td>Yes</td></tr>
+<tr><td>Rent, exchange and donate</td><td>–</td><td>Informal</td><td>Limited</td><td>Yes</td></tr>
+<tr><td>Used-book pricing</td><td>–</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+</table></div>
+
+<h2 style="margin-top:56px">How we will measure it</h2>
+<p class="lede">Planned pilot metrics. The values stay empty until a real pilot study is run.</p>
+<div class="metrics">
+<div class="metric"><b>—</b><span>Students registered</span></div>
+<div class="metric"><b>—</b><span>Books listed</span></div>
+<div class="metric"><b>—</b><span>Successful exchanges</span></div>
+<div class="metric"><b>—</b><span>Average time to find a book</span></div>
+<div class="metric"><b>—</b><span>User satisfaction survey</span></div>
+<div class="metric"><b>—</b><span>Listings with complete academic details</span></div>
+</div>
+
+<h2 style="margin-top:56px">Roadmap</h2>
+<div class="road">
+<div>Run student interviews and a needs survey</div>
+<div>Design wireframes and build a minimum viable product</div>
+<div>Pilot with one department</div>
+<div>Evaluate usability, listing quality and exchanges</div>
+<div>Improve safety, moderation and reliability</div>
+<div>Explore other departments and colleges</div>
+</div>
+</div></section>
+
+<footer>
+<h2>Reuse Books. Reduce Costs. Share Knowledge.</h2>
+<p>BookLoop · EDI project concept (U24ED411)</p>
+<p>Questions and Suggestions?</p>
+</footer>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
